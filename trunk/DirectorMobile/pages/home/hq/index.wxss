@@ -1,0 +1,122 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+/* .top {
+  padding: 20rpx;
+}
+
+.top text {
+  font-size: 30rpx;
+  color: #7b7b7b;
+  line-height: 60rpx;
+}
+
+.top .welfare-name {
+  float: right;
+} */
+
+.menu-box {
+  margin: 20rpx;
+  background-color: #446977;
+  border-radius: 8rpx;
+  padding: 20rpx;
+}
+
+.menu-item text {
+  display: inline-block;
+  vertical-align: top;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.menu-item .menu-item-right {
+  float: right;
+}
+
+.menu-title {
+  font-size: 30rpx;
+  color: #333;
+  background-color: #f2f6f8;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: row;
+  background-color: #f9f9f9;
+  margin-top: 10rpx;
+}
+
+.info-box .info-side {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+   width: 150rpx;
+}
+
+.info-side .info-side-top {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.info-side .info-side-bottom {
+  color: #8fc4d9;
+  font-weight: bold;
+  margin: 24rpx 20rpx 20rpx 20rpx;
+}
+
+.info-box .info-content {
+  flex: 1;
+}
+
+.info-content .info-content-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100rpx;
+}
+
+.info-content .info-content-bottom {
+  margin: 20rpx;
+}
+
+.info-content-bottom text {
+  margin-left: 20rpx;
+}
+
+.info-content-top .info-content-top-content {
+  flex: 1;
+  text-align: center;
+}
+
+.info-side-top .name {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.info-box view {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.info-box text {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.line-vertical {
+  width: 4rpx;
+  background-color: white;
+}
+
+.line-horizontal {
+  height: 4rpx;
+  background-color: white;
+}

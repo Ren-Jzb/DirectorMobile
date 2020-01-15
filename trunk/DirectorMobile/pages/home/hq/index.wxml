@@ -1,0 +1,106 @@
+<scroll-view scroll-y="true">
+  <view class='wrapper'>
+
+    <!-- <view class='top'>
+      <text>{{date}}</text>
+      <text class='welfare-name'></text>
+    </view> -->
+
+    <view class='menu-box'>
+      <view class='menu-item' wx:for='{{hqList}}' wx:key="unique">
+        <text>{{item.YwSwName}}</text>
+        <text class='menu-item-right'>{{item.YwSwDate}}</text>
+      </view>
+    </view>
+
+    <view class='menu-title'>今日营养配餐</view>
+
+    <view class='info-box'>
+      <view class='info-side'>
+        <view class='info-side-top'>
+          <view class='name'>早餐</view>
+        </view>
+        <view class='info-side-bottom'>特需</view>
+      </view>
+      <view class='line-vertical'></view>
+      <view class='info-content'>
+        <view class='info-content-top'>
+          <view class='info-content-top-content'>{{model.breakfastDateList[0].foodName}}</view>
+          <view class='info-content-top-content'>
+            <view>{{model.breakfastDateList[1].foodName}}</view>
+            <view>{{model.breakfastDateList[2].foodName}}</view>
+          </view>
+          <view class='info-content-top-content'>
+            <view>{{model.breakfastDateList[3].foodName}}</view>
+            <view>{{model.breakfastDateList[4].foodName}}</view>
+          </view>
+        </view>
+        <view class='line-horizontal'></view>
+        <view class='info-content-bottom'>
+          <block wx:for='{{model.txbreakfastDateList}}' wx:key="unique">
+            <text>{{item.foodName}}</text>
+          </block>
+        </view>
+      </view>
+    </view>
+
+    <view class='info-box'>
+      <view class='info-side'>
+        <view class='info-side-top'>
+          <view class='name'>午餐</view>
+        </view>
+        <view class='info-side-bottom'>特需</view>
+      </view>
+      <view class='line-vertical'></view>
+      <view class='info-content'>
+        <view class='info-content-top'>
+          <view class='info-content-top-content'>{{model.lunchDateList[0].foodName}}</view>
+          <view class='info-content-top-content'>
+            <view>{{model.lunchDateList[1].foodName}}</view>
+            <view>{{model.lunchDateList[2].foodName}}</view>
+          </view>
+          <view class='info-content-top-content'>
+            <view>{{model.lunchDateList[3].foodName}}</view>
+            <view>{{model.lunchDateList[4].foodName}}</view>
+          </view>
+        </view>
+        <view class='line-horizontal'></view>
+        <view class='info-content-bottom'>
+          <block wx:for='{{model.txlunchDateList}}' wx:key="unique">
+            <text>{{item.foodName}}</text>
+          </block>
+        </view>
+      </view>
+    </view>
+
+    <view class='info-box'>
+      <view class='info-side'>
+        <view class='info-side-top'>
+          <view class='name'>晚餐</view>
+        </view>
+        <view class='info-side-bottom'>特需</view>
+      </view>
+      <view class='line-vertical'></view>
+      <view class='info-content'>
+        <view class='info-content-top'>
+          <view class='info-content-top-content'>{{model.dinnerDateList[0].foodName}}</view>
+          <view class='info-content-top-content'>
+            <view>{{model.dinnerDateList[1].foodName}}</view>
+            <view>{{model.dinnerDateList[2].foodName}}</view>
+          </view>
+          <view class='info-content-top-content'>
+            <view>{{model.dinnerDateList[3].foodName}}</view>
+            <view>{{model.dinnerDateList[4].foodName}}</view>
+          </view>
+        </view>
+        <view class='line-horizontal'></view>
+        <view class='info-content-bottom'>
+          <block wx:for='{{model.txdinnerDateList}}' wx:key="unique">
+            <text>{{item.foodName}}</text>
+          </block>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</scroll-view>

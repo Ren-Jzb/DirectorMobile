@@ -1,0 +1,57 @@
+<!--pages/home/xz/index.wxml-->
+<view class='wrapper'>
+
+  <view class='top'>
+    <picker mode="selector" bindchange="bindChange" value="{{index}}" range="{{array}}">
+      <text class='year'>{{year}}</text>
+    </picker>
+    <text class='welfare-name'></text>
+  </view>
+
+  <view class='menu-box'>
+
+    <navigator url="../../list/xz/jkwp/index?year={{year}}" open-type="navigate" hover-class="none">
+      <text>捐款物品明细</text>
+      <text class='menu-right'>{{model.JkWpMxNumber}}</text>
+    </navigator>
+
+    <view class='line-horizontal'></view>
+
+    <navigator url="../../list/xz/ccdj/index?year={{year}}" open-type="navigate" hover-class="none">
+      <text>差错登记</text>
+      <text class='menu-right'>{{model.CcDjNumber}}</text>
+    </navigator>
+
+    <view class='line-horizontal'></view>
+
+    <navigator url="../../list/xz/yjkx/index?year={{year}}" open-type="navigate" hover-class="none">
+      <text>意见开箱</text>
+      <text class='menu-right'>{{model.YjKxNumber}}</text>
+    </navigator>
+
+  </view>
+
+  <view class='menu-box second'>
+
+    <navigator url="../../list/xz/hypx/index?year={{year}}" open-type="navigate" hover-class="none">
+      <text>会议培训</text>
+      <text class='menu-right'>{{model.HyPxNumber}}</text>
+    </navigator>
+
+    <view class='line-horizontal'></view>
+
+    <navigator url="../../list/xz/xqxz/index?year={{year}}" open-type="navigate" hover-class="none">
+      <text>兴趣小组</text>
+      <text class='menu-right'>{{model.XqXzNumber}}</text>
+    </navigator>
+
+    <view class='line-horizontal'></view>
+
+    <navigator url="../../list/xz/dxhd/index?year={{year}}" open-type="navigate" hover-class="none">
+      <text>大型活动</text>
+      <text class='menu-right'>{{model.DxHdNumber}}</text>
+    </navigator>
+
+  </view>
+
+</view>

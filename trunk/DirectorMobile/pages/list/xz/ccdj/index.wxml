@@ -1,0 +1,40 @@
+<scroll-view scroll-y="true" bindscrolltolower="searchScrollLower" style="height: 100%;">
+  <view class='wrapper'>
+    <block wx:for="{{dataList}}" wx:for-item="item" wx:key="unique">
+      <view class='item-view'>
+        <view class='item-value'>{{item.RecordingTime}}</view>
+        <view class='line-horizontal'></view>
+        <view>
+          <text>差错情况:</text>
+          <text class='item-value'>{{item.MistakeContent}}</text>
+        </view>
+        <view>
+          <text>整改措施:</text>
+          <text class='item-value'>{{item.RectifySituation}}</text>
+        </view>
+        <view>
+          <text>负责人:</text>
+          <text class='item-value'>{{item.RecordingQm}}</text>
+        </view>
+        <view>
+          <text>备注:</text>
+          <text class='item-value'>{{item.Remark}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="load-more-wrap" hidden='{{showLoading}}'>
+    <block wx:if="{{hasMore}}">
+      <view class="load-content">
+        <text class="weui-loading" />
+        <text class="loading-text">加载中</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="load-content">
+        <text>没有更多内容了</text>
+      </view>
+    </block>
+  </view>
+</scroll-view>

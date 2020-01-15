@@ -1,0 +1,39 @@
+<scroll-view scroll-y="true" style="height: 100%;">
+  <view class='wrapper'>
+
+    <view>
+      <text>时间:</text>
+      <text class='item-value'>{{item.ADateTime}}</text>
+    </view>
+    <view>
+      <text>活动地点:</text>
+      <text class='item-value'>{{item.APlace}}</text>
+    </view>
+    <view>
+      <text>活动主题:</text>
+      <text class='item-value'>{{item.ATheme}}</text>
+    </view>
+    <view>
+      <text>出席对象:</text>
+      <text class='item-value'>{{item.AAttendObject}}</text>
+    </view>
+    <view>
+      <text>负责人:</text>
+      <text class='item-value'>{{item.AResponsibleSignature}}</text>
+    </view>
+    <view>
+      <text>签名时间:</text>
+      <text class='item-value'>{{item.ADateSignature}}</text>
+    </view>
+    <view>
+      <text>活动情况概述:</text>
+      <!-- <text class='item-value'>{{item.AOverview}}</text> -->
+    </view>
+    <view>
+      <rich-text nodes="{{item.AOverview}}"></rich-text>
+    </view>
+
+  </view>
+
+
+</scroll-view>

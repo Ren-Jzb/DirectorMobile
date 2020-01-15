@@ -1,0 +1,53 @@
+<scroll-view scroll-y="true" bindscrolltolower="searchScrollLower" style="height: 100%;">
+  <view class='wrapper'>
+    <block wx:for="{{dataList}}" wx:for-item="item" wx:key="unique">
+      <view class='item-view'>
+        <view class='item-value'>{{item.operateDate}}</view>
+        <view class='line-horizontal'></view>
+        <view>
+          <text class='item-name'>{{item.customerName}}</text>
+          <text class='item-bed'>{{item.roomName}}室{{item.bedNumber}}床</text>
+        </view>
+        <view>
+          <text>委托日期:</text>
+          <text class='item-value'>{{item.wtfOperateDate}}</text>
+        </view>
+        <view>
+          <text>委托方:</text>
+        </view>
+        <view>
+          <image src='{{wtfImageUrl+item.wtfAutograph}}' lazy-load='true'></image>
+        </view>
+        <view>
+          <text>接受日期:</text>
+          <text class='item-value'>{{item.jsfOperateDate}}</text>
+        </view>
+        <view>
+          <text>接受方:</text>
+        </view>
+        <view>
+          <image src='{{jsfImageUrl+item.jsfAutograph}}' lazy-load='true'></image>
+        </view>
+        <view>
+          <text>操作人:</text>
+          <text class='item-value'>{{item.RealName}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+
+  <view class="load-more-wrap" hidden='{{showLoading}}'>
+    <block wx:if="{{hasMore}}">
+      <view class="load-content">
+        <text class="weui-loading" />
+        <text class="loading-text">加载中</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="load-content">
+        <text>没有更多内容了</text>
+      </view>
+    </block>
+  </view>
+</scroll-view>

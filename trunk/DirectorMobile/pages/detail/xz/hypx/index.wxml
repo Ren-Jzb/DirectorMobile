@@ -1,0 +1,40 @@
+<scroll-view scroll-y="true" style="height: 100%;">
+  <view class='wrapper'>
+    <view>
+      <text>时间:</text>
+      <text class='item-value'>{{item.ADataTime}}</text>
+    </view>
+    <view>
+      <text>地点:</text>
+      <text class='item-value'>{{item.APlace}}</text>
+    </view>
+    <view>
+      <text>主持人:</text>
+      <text class='item-value'>{{item.AHostPeople}}</text>
+    </view>
+    <view>
+      <text>类型:</text>
+      <text class='item-value'>{{item.AType}}</text>
+    </view>
+    <view>
+      <text>内容:</text>
+      <text class='item-value'>{{item.AContent}}</text>
+    </view>
+    <view>
+      <text>记录人:</text>
+      <text class='item-value'>{{item.ARecordPeople}}</text>
+    </view>
+    <view>
+      <text>参加人员:</text>
+      <text class='item-value'>{{item.AParticipatePeoples}}</text>
+    </view>
+    <view>
+      <text>内容纪录:</text>
+      <!-- <text class='item-value'>{{item.AContentRecord}}</text> -->
+    </view>
+    <view>
+      <rich-text nodes="{{item.AContentRecord}}"></rich-text>
+    </view>
+  </view>
+
+</scroll-view>

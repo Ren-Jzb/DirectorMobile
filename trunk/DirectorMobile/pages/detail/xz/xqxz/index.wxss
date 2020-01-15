@@ -1,0 +1,17 @@
+.wrapper {
+  background-color: white;
+  display: flex;
+  padding: 0rpx 20rpx;
+  flex-direction: column;
+}
+
+.wrapper view{
+  font-size: 30rpx;
+  color: #666666;
+  margin: 20rpx;
+}
+
+.wrapper .item-value{
+   color: black;
+   margin-left: 20rpx;
+}

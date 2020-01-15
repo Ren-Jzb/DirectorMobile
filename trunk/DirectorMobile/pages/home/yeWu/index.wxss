@@ -1,0 +1,162 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+/* .top {
+  padding: 20rpx;
+}
+
+.top text {
+  font-size: 30rpx;
+  color: #7b7b7b;
+  line-height: 60rpx;
+}
+
+.top .welfare-name {
+  float: right;
+} */
+
+.menu-box {
+  margin: 20rpx;
+  background-color: #446977;
+  border-radius: 8rpx;
+  padding-bottom: 20rpx;
+}
+
+.menu-box navigator {
+  padding: 20rpx;
+}
+
+navigator text {
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 60rpx;
+}
+
+navigator .menu-top-right {
+  float: right;
+}
+
+.menu-box .menu-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-info .menu-item {
+  flex: 1;
+  text-align: center;
+}
+
+.menu-item view {
+  font-size: 28rpx;
+  color: #fff;
+  margin-top: 10rpx;
+}
+
+.menu-xd-box {
+  margin: 20rpx;
+  background-color: #446977;
+  border-radius: 8rpx;
+  padding: 20rpx;
+}
+
+.menu-xd-item text {
+  display: inline-block;
+  vertical-align: top;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.menu-xd-item .menu-xd-item-right {
+  float: right;
+}
+
+.line-horizontal {
+  height: 2rpx;
+  background-color: #ddd;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.menu-ry-box {
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 20rpx 0rpx 20rpx;
+  background-color: #628ea1;
+  border-radius: 8rpx;
+}
+
+.menu-ry-box .menu-ry-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  padding: 20rpx;
+}
+
+.menu-ry-item view {
+  font-size: 30rpx;
+  color: #fff;
+}
+
+
+.menu-ry-item .count {
+  margin-top: 10rpx;
+}
+
+
+.menu-ry-item.active::after{
+  content: '';
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-top: 10rpx solid transparent;
+  border-bottom: 10rpx solid white;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.menu-ry-info-box {
+  margin: 0rpx 20rpx 20rpx 20rpx;
+  background-color: white;
+  border-radius: 8rpx;
+  border: 2rpx solid #ddd;
+}
+
+.menu-ry-info-box .title {
+  font-size: 30rpx;
+  color: #7b7b7b;
+  margin: 20rpx;
+}
+
+.menu-ry-info-box .info-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20rpx;
+}
+
+.info-box .info-box-item {
+  width: 167.5rpx;
+  text-align: center;
+}
+
+.info-box-item view {
+  font-size: 30rpx;
+  color: #7b7b7b;
+  margin: 20rpx;
+}
+
+.info-box-item .name {
+  font-size: 30rpx;
+  color: #8fc4d9;
+}

@@ -1,0 +1,15 @@
+<!--pages/update/index.wxml-->
+<view class='wrapper'>
+  <form bindsubmit='update'>
+    <view class='menu'>
+      <view>新密码：</view>
+      <input placeholder="请输入新密码" placeholder-style="color:#ccc" password='true' name="newPassword" />
+    </view>
+    <view class='menu'>
+      <view>确认新密码：</view>
+      <input placeholder="请输入新密码" placeholder-style="color:#ccc" password='true' name="confirmPassword" />
+    </view>
+    <button form-type='submit' class='login'>确定</button>
+  </form>
+
+</view>

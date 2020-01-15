@@ -1,0 +1,39 @@
+<scroll-view scroll-y="true" bindscrolltolower="searchScrollLower" style="height: 100%;">
+  <view class='wrapper'>
+
+    <block wx:for="{{dataList}}" wx:for-item="item" wx:key="unique">
+      <view class='item-view'>
+        <view class='item-info'>
+          <text>{{item.CustomerName}}</text>
+          <text>{{item.CustomerSex}}</text>
+          <text>{{item.CustomerAge}}</text>
+          <text>{{item.CustomerBed}}</text>
+          <view class='item-tag'>{{CustomerType==1?"今日入院":CustomerType==2?"离院":"外出"}}</view>
+        </view>
+
+        <view class='item-content'>{{item.Reason}}</view>
+
+        <view class='item-date'>
+          <view>{{CustomerType==1?"入院日期":CustomerType==2?"离院日期":"外出日期"}}</view>
+          <view>{{item.CustomerRuYuanDate}}</view>
+        </view>
+
+        <view class="item-new {{CustomerType==1?'active':''}}">新人</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="load-more-wrap" hidden='{{showLoading}}'>
+    <block wx:if="{{hasMore}}">
+      <view class="load-content">
+        <text class="weui-loading" />
+        <text class="loading-text">加载中</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="load-content">
+        <text>没有更多内容了</text>
+      </view>
+    </block>
+  </view>
+</scroll-view>

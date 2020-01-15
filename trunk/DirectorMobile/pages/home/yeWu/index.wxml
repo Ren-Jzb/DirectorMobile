@@ -1,0 +1,67 @@
+<scroll-view scroll-y="true">
+  <view class='wrapper'>
+
+    <!-- <view class='top'>
+      <text class='year'>{{date}}</text>
+      <text class='welfare-name'></text>
+    </view> -->
+
+    <view class='menu-box'>
+       <navigator url="../../list/yeWu/index" open-type="navigate">
+        <text>今日床位情况</text>
+        <text class='menu-top-right'>查看 ></text>
+      </navigator>
+
+      <view class='line-horizontal'></view>
+
+      <view class='menu-info'>
+        <view class='menu-item'>
+          <view>床位数</view>
+          <view>{{model.BedNumber}}</view>
+        </view>
+        <view class='menu-item'>
+          <view>老人数</view>
+          <view>{{model.CustomerNumber}}</view>
+        </view>
+        <view class='menu-item'>
+          <view>今日入院</view>
+          <view>{{model.CustomerRuYuanNumber}}</view>
+        </view>
+        <view class='menu-item'>
+          <view>今日出院</view>
+          <view>{{model.CustomerLiYuanNumber}}</view>
+        </view>
+        <view class='menu-item'>
+          <view>今日外出</view>
+          <view>{{model.CustomerWaiChuNumber}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class='menu-xd-box'>
+      <view class='menu-xd-item' wx:for='{{ywList}}' wx:key="unique">
+        <text>{{item.YwSwName}}</text>
+        <text class='menu-xd-item-right'>{{item.YwSwDate}}</text>
+      </view>
+    </view>
+
+    <view class='menu-ry-box'>
+      <view class="menu-ry-item {{tag==index?'active':''}}" data-tag='{{index}}' bindtap='checkTag' wx:for="{{ywUserList}}" wx:key="unique">
+        <view>{{item.userType}}</view>
+        <view class='count'>{{item.userNumber}}</view>
+      </view>
+    </view>
+
+    <view class='menu-ry-info-box'>
+      <view class='title'>{{title}}</view>
+      <view class='line-horizontal'></view>
+      <view class='info-box'>
+        <view class='info-box-item' wx:for="{{list}}" wx:key="unique">
+          <view>{{item.uersName}}</view>
+          <view class='name'>{{item.uersDetp}}</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</scroll-view>

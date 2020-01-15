@@ -1,0 +1,103 @@
+<scroll-view scroll-y="true">
+
+  <view class='top'>
+   <picker mode="selector" bindchange="bindChange" value="{{index}}" range="{{array}}" range-key="{{'welfareCentreName'}}">
+      <view class='top-right picker'>
+        <image src='/images/icons/icon-funnel.png'></image>
+        <text>{{welfareName}}</text>
+      </view>
+    </picker>
+    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+    <view class='line-horizontal-1'></view>
+    <view class='top-bottom-item'>
+      <view class="top-bottom-info">
+        <text class='info-name'>本院院长</text>
+        <text class='info-value'>{{yzName==null ? "":yzName}}</text>
+      </view>
+      <view class="top-bottom-info">
+        <text class='info-name'>今日值班护工</text>
+        <text class='info-value active'>{{zbCount}}</text>
+      </view>
+    </view>
+    <view class='top-bottom-item1'>
+      <text class='info-name'>今日护工组长</text>
+      <view class="info-box">
+        <text class='info-value1'>{{hgzz}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='info-wrapper'>
+    <block>
+      <view class="info-item">
+        <view class="info-title">空余床位</view>
+        <view class="info-num">{{kyTotal}}</view>
+      </view>
+    </block>
+    <view class='line-vertical'></view>
+    <block>
+      <view class="info-item">
+        <view class="info-title">床位总数</view>
+        <view class="info-num">{{bedTotal}}</view>
+      </view>
+    </block>
+    <view class='line-vertical'></view>
+    <block>
+      <view class="info-item">
+        <view class="info-title">老人总数</view>
+        <view class="info-num">{{customerTotal}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class='menue-box'>
+    <view class="menue-item">
+      <navigator url="../home/xz/index" open-type="navigate" hover-class="none">
+        <image src="/images/icons/menu-icon1.png" class="menue-img" />
+        <view class="menue-text">行政</view>
+      </navigator>
+    </view>
+    <view class='line-vertical-1'></view>
+    <view class="menue-item">
+      <navigator url="../home/yeWu/index" open-type="navigate" hover-class="none">
+        <image src="/images/icons/menu-icon2.png" class="menue-img" />
+        <view class="menue-text">业务</view>
+      </navigator>
+    </view>
+    <view class='line-vertical-1'></view>
+    <view class="menue-item">
+      <navigator url="../home/hl/index" open-type="navigate" hover-class="none">
+        <image src="/images/icons/menu-icon3.png" class="menue-img" />
+        <view class="menue-text">护理</view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='line-horizontal'></view>
+
+  <view class='menue-box'>
+    <view class="menue-item">
+      <navigator url="../home/yiWu/index" open-type="navigate" hover-class="none">
+        <image src="/images/icons/menu-icon4.png" class="menue-img" />
+        <view class="menue-text">医务</view>
+      </navigator>
+    </view>
+    <view class='line-vertical-1'></view>
+    <view class="menue-item">
+      <navigator url="../home/hq/index" open-type="navigate" hover-class="none">
+        <image src="/images/icons/menu-icon5.png" class="menue-img" />
+        <view class="menue-text">后勤</view>
+      </navigator>
+    </view>
+    <view class='line-vertical-1'></view>
+    <view class="menue-item">
+      <!-- <navigator url="" open-type="navigate"> -->
+      <view class='menu-more'>
+        <image src="/images/icons/menu-icon6.png" class="menue-img" />
+        <view class="menue-text">更多</view>
+      </view>
+      <!-- </navigator> -->
+    </view>
+  </view>
+
+</scroll-view>

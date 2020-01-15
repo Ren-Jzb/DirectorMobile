@@ -1,0 +1,32 @@
+<scroll-view scroll-y="true" style="height: 100%;">
+  <view class='wrapper'>
+    <view>
+      <text>时间:</text>
+      <text class='item-value'>{{item.IADateTime}}</text>
+    </view>
+     <view>
+      <text>小组名称:</text>
+      <text class='item-value'>{{item.IGroupName}}</text>
+    </view>
+    <view>
+      <text>活动地点:</text>
+      <text class='item-value'>{{item.IAPlace}}</text>
+    </view>
+    <view>
+      <text>参加人数:</text>
+      <text class='item-value'>{{item.IParticipants}}</text>
+    </view>
+    <view>
+      <text>负责人:</text>
+      <text class='item-value'>{{item.IAResponsible}}</text>
+    </view>
+    <view>
+      <text>活动内容:</text>
+      <!-- <text class='item-value'>{{item.IAContent}}</text> -->
+    </view>
+    <view>
+      <rich-text nodes="{{item.IAContent}}"></rich-text>
+    </view>
+  </view>
+
+</scroll-view>

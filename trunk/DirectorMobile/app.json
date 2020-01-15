@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/index",
+    "pages/my/index",
+    "pages/update/index",
+    "pages/home/xz/index",
+    "pages/home/yeWu/index",
+    "pages/home/hl/index",
+    "pages/home/yiWu/index",
+    "pages/home/hq/index",
+    "pages/list/xz/dxhd/index",
+    "pages/list/xz/xqxz/index",
+    "pages/list/xz/hypx/index",
+    "pages/list/xz/yjkx/index",
+    "pages/list/xz/ccdj/index",
+    "pages/list/xz/jkwp/index",
+    "pages/list/yeWu/index",
+    "pages/list/yiWu/jssy/index",
+    "pages/list/yiWu/xf/index",
+    "pages/list/yiWu/hy/index",
+    "pages/list/yiWu/wtfy/index",
+    "pages/list/yiWu/zxfy/index",
+    "pages/list/yiWu/bqgz/index",
+    "pages/list/yiWu/ysbh/index",
+    "pages/detail/xz/hypx/index",
+    "pages/detail/xz/dxhd/index",
+    "pages/detail/xz/xqxz/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#446977",
+    "navigationBarTitleText": "黄浦养老机构",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#ffffff",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#2d525e",
+    "color": "#cccccc",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icons/nav-icon1.png",
+        "selectedIconPath": "images/icons/nav-icon-active-1.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "images/icons/nav-icon4.png",
+        "selectedIconPath": "images/icons/nav-icon-active-4.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

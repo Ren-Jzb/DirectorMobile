@@ -1,0 +1,56 @@
+<scroll-view scroll-y="true" bindscrolltolower="searchScrollLower" style="height: 100%;">
+  <view class='wrapper'>
+
+    <block wx:for="{{dataList}}" wx:for-item="item" wx:key="unique">
+      <view class='item-view'>
+         <view>
+          <text class='item-name'>{{item.customerName}}</text>
+          <text class='item-bed'>{{item.roomName}}室{{item.bedNumber}}床</text>
+        </view>
+        <view class='line-horizontal'></view>
+        <view>
+          <text>体温:</text>
+          <text class='item-value'>{{item.tiWen}}°C</text>
+        </view>
+        <view>
+          <text>呼吸:</text>
+          <text class='item-value'>{{item.huXi}}次/分</text>
+        </view>
+        <view>
+          <text>脉搏:</text>
+          <text class='item-value'>{{item.maiBo}}次/分</text>
+        </view>
+        <view>
+          <text>血糖值:</text>
+          <text class='item-value'>血糖值饭前：{{item.xueTangZhiFq}}mol；血糖值饭后：{{item.xueTangZhiFh}}mol</text>
+        </view>
+        <view>
+          <text>血压:</text>
+          <text class='item-value'>收缩压：{{item.shouSuoYa}}mmhg；舒张压：{{item.shuZhangYa}}mmhg</text>
+        </view>
+        <view>
+          <text>备注:</text>
+          <text class='item-value'>{{item.remark}}</text>
+        </view>
+        <view>
+          <text>操作人:</text>
+          <text class='item-value'>{{item.RealName}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="load-more-wrap" hidden='{{showLoading}}'>
+    <block wx:if="{{hasMore}}">
+      <view class="load-content">
+        <text class="weui-loading" />
+        <text class="loading-text">加载中</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="load-content">
+        <text>没有更多内容了</text>
+      </view>
+    </block>
+  </view>
+</scroll-view>

@@ -1,0 +1,49 @@
+<scroll-view scroll-y="true" bindscrolltolower="searchScrollLower" style="height: 100%;">
+  <view class='wrapper'>
+
+    <block wx:for="{{dataList}}" wx:for-item="item" wx:key="unique">
+      <view class='item-view'>
+        <view class='item-value'>{{item.DonorsTime}}</view>
+        <view class='line-horizontal'></view>
+        <view>
+          <text>捐款人:</text>
+          <text class='item-value'>{{item.Donors}}</text>
+        </view>
+        <view>
+          <text>捐款分类:</text>
+          <text class='item-value'>{{item.DonationType}}</text>
+        </view>
+        <view>
+          <text>捐款内容:</text>
+          <text class='item-value'>{{item.DonationContent}}</text>
+        </view>
+        <view>
+          <text>处置意见:</text>
+          <text class='item-value'>{{item.DisposalOpinion}}</text>
+        </view>
+        <view>
+          <text>经办人:</text>
+          <text class='item-value'>{{item.Operator}}</text>
+        </view>
+        <view>
+          <text>备注:</text>
+          <text class='item-value'>{{item.Remark}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+   <view class="load-more-wrap" hidden='{{showLoading}}'>
+    <block wx:if="{{hasMore}}">
+      <view class="load-content">
+        <text class="weui-loading" />
+        <text class="loading-text">加载中</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="load-content">
+        <text>没有更多内容了</text>
+      </view>
+    </block>
+  </view>
+</scroll-view>

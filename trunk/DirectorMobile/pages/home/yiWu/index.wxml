@@ -1,0 +1,62 @@
+<!--pages/home/yiWu/index.wxml-->
+<view class='wrapper'>
+
+  <!-- <view class='top'>
+    <text>{{date}}</text>
+    <text class='welfare-name'></text>
+  </view> -->
+
+  <view class='menu-box'>
+
+    <navigator url="../../list/yiWu/jssy/index" open-type="navigate" hover-class="none">
+      <text>今日家属送药</text>
+      <text class='menu-right'>{{model.JsSyNumber}}</text>
+    </navigator>
+
+    <view class='line-horizontal'></view>
+
+    <navigator url="../../list/yiWu/ysbh/index" open-type="navigate" hover-class="none">
+      <text>今日老人饮食变化</text>
+      <text class='menu-right'>{{model.LrYsBhNumber}}</text>
+    </navigator>
+
+    <view class='line-horizontal'></view>
+
+    <navigator url="../../list/yiWu/xf/index" open-type="navigate" hover-class="none">
+      <text>今日巡房</text>
+      <text class='menu-right'>{{model.RcJcNumber}}</text>
+    </navigator>
+
+    <view class='line-horizontal'></view>
+
+    <navigator url="../../list/yiWu/hy/index" open-type="navigate" hover-class="none">
+      <text>今日换药</text>
+      <text class='menu-right'>{{model.HyNumber}}</text>
+    </navigator>
+
+  </view>
+
+  <view class='menu-box second'>
+
+    <navigator url="../../list/yiWu/wtfy/index" open-type="navigate" hover-class="none">
+      <text>委托发放药物约定</text>
+      <text class='menu-right'></text>
+    </navigator>
+
+    <view class='line-horizontal'></view>
+
+    <navigator url="../../list/yiWu/zxfy/index" open-type="navigate" hover-class="none">
+      <text>老人自行服药承诺</text>
+      <text class='menu-right'></text>
+    </navigator>
+
+    <view class='line-horizontal'></view>
+
+    <navigator url="../../list/yiWu/bqgz/index" open-type="navigate" hover-class="none">
+      <text>病情告知</text>
+      <text class='menu-right'></text>
+    </navigator>
+
+  </view>
+
+</view>

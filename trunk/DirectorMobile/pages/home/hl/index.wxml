@@ -1,0 +1,79 @@
+<scroll-view scroll-y="true">
+  <view class='wrapper'>
+
+    <view class='top'>
+      <picker mode="selector" bindchange="bindChange" value="{{index}}" range="{{array}}" range-key="{{'floorName'}}">
+        <text class='floor'>{{floorName}}</text>
+      </picker>
+      <text class='welfare-name'></text>
+    </view>
+
+    <view class='item-view'>
+      <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ecPie }}"></ec-canvas>
+    </view>
+
+    <view class='item-view'>
+      <view class='item-top'>
+        <text>今日当班护工</text>
+        <text class='item-top-right'></text>
+      </view>
+
+      <view class='line-horizontal'></view>
+
+      <view class='item-content'>
+        <view class='item-info'>
+          <view>组长</view>
+          <view class='item-value'>{{model.hgZzName}}</view>
+        </view>
+        <view class='item-info'>
+          <view>护理人员</view>
+          <view class='item-value'>{{model.hgCount}}</view>
+        </view>
+        <view class='item-info'>
+          <view>本月护理量</view>
+          <view class='item-value'>{{model.hglCount}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class='item-view'>
+      <view class='item-top'>
+        <text>本月护工护理量</text>
+        <text class='item-top-right'></text>
+      </view>
+      <view class='line-horizontal'></view>
+
+      <view class='menu-box'>
+        <text class='title'>组长</text>
+        <block wx:for="{{model2.hgZzDataList}}" wx:key="unique">
+          <view class='menu-bar'>
+            <view class='menu-bar-top'>
+              <text>{{item.hgName}}</text>
+              <text>{{item.hglCount}}</text>
+            </view>
+            <view class="bar-progress-bg">
+              <view class="bar-progress" style='width:{{model2.maxHgZz==0?0:(item.hglCount*630/model2.maxHgZz)}}rpx'></view>
+            </view>
+          </view>
+        </block>
+      </view>
+
+       <view class='menu-box'>
+        <text class='title'>护工</text>
+        <block wx:for="{{model2.hgDataList}}" wx:key="unique">
+          <view class='menu-bar'>
+            <view class='menu-bar-top'>
+              <text>{{item.hgName}}</text>
+              <text>{{item.hglCount}}</text>
+            </view>
+            <view class="bar-progress-bg">
+              <view class="bar-progress" style='width:{{model2.maxHg==0?0:(item.hglCount*630/model2.maxHg)}}rpx'></view>
+            </view>
+          </view>
+        </block>
+      </view>
+
+    </view>
+
+  </view>
+</scroll-view>

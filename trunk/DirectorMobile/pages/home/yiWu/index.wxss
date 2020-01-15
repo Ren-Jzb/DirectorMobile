@@ -1,0 +1,58 @@
+/* pages/home/yiWu/index.wxss */
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+}
+
+/* .top {
+  padding: 20rpx;
+}
+
+.top text {
+  font-size: 26rpx;
+  color: #7b7b7b;
+  line-height: 60rpx;
+}
+
+.top .welfare-name {
+  float: right;
+} */
+
+.menu-box {
+  margin-top: 40rpx;
+  background-color: white;
+}
+
+.menu-box.second {
+  margin-top: 40rpx;
+}
+
+navigator {
+  padding: 20rpx;
+}
+
+navigator text {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 60rpx;
+}
+
+navigator .menu-right {
+  float: right;
+  color: #74b7d1;
+}
+
+.menu-right::after {
+  content: ">";
+  color: #7b7b7b;
+  margin-left: 20rpx;
+}
+
+.line-horizontal {
+  height: 2rpx;
+  background-color: #ddd;
+  margin-left: 20rpx;
+}
